@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe HawatelPs do
+describe HawatelPS do
   it 'has a version number' do
-    expect(HawatelPs::VERSION).not_to be nil
+    expect(HawatelPS::VERSION).not_to be nil
   end
 
   it 'does something useful' do

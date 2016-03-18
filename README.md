@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/Hawatel/hawatel_ps.svg?branch=master)](https://travis-ci.org/Hawatel/hawatel_ps)
+[![Code Climate](https://codeclimate.com/github/Hawatel/hawatel_ps/badges/gpa.svg)](https://codeclimate.com/github/Hawatel/hawatel_ps)
+[![Test Coverage](https://codeclimate.com/github/Hawatel/hawatel_ps/badges/coverage.svg)](https://codeclimate.com/github/Hawatel/hawatel_ps/coverage)
+[![Inline docs](http://inch-ci.org/github/Hawatel/hawatel_ps.svg?branch=master)](http://inch-ci.org/github/Hawatel/hawatel_ps)
+[![Gem Version](https://badge.fury.io/rb/hawatel_ps.svg)](https://badge.fury.io/rb/hawatel_ps)
+
 # HawatelPS
 
 ## Summary

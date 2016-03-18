@@ -5,7 +5,7 @@ require 'hawatel_ps/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "hawatel_ps"
-  spec.version       = HawatelPs::VERSION
+  spec.version       = HawatelPS::VERSION
   spec.authors       = ['Przemyslaw Mantaj','Daniel Iwaniuk']
   spec.email         = ['przemyslaw.mantaj@hawatel.com', 'daniel.iwaniuk@hawatel.com']
 
@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"
+  spec.add_development_dependency "codeclimate-test-reporter"
 end

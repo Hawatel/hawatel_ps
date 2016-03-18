@@ -1,4 +1,6 @@
 module HawatelPS
+  ##
+  # = HawatelPS Exception
   class HawatelPSException < Exception
     # Custom exception
     # @param args [Hash] the options to create a custom exception message

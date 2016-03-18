@@ -1,5 +1,7 @@
 module HawatelPS
   module Windows
+    ##
+    # = Process Control
     class ProcControl
 
       # Check current process status
@@ -18,32 +20,6 @@ module HawatelPS
         return 'non-privilaged operation'
       end
 
-      # Suspend process without loss data
-      #
-      # @example
-      #   p = HawatelPS.search_by_pid('1020')
-      #   p.suspend
-      #
-      # @return [String]
-      def suspend
-        # TODO There is no SuspendProcess API function in Windows.
-        # This was described in article: http://www.codeproject.com/Articles/2964/Win-process-suspend-resume-tool
-        # The suspend method isn't not save
-      end
-
-
-      # Resume suspended process
-      # @example
-      #   p = HawatelPS.search_by_pid('1020')
-      #   p.resume
-      # @return [String]
-      def resume
-        # TODO There is no ResumeProcess API function in Windows.
-        # This was described in article: http://www.codeproject.com/Articles/2964/Win-process-suspend-resume-tool
-        # The resume method isn't not save
-      end
-
-
       # Terminate process
       # @example
       #   p = HawatelPS.search_by_pid('1020')
@@ -59,8 +35,7 @@ module HawatelPS
       #   * Other (22–4294967295)
       def terminate
         return @proc_attrs[:wmi_object].Terminate if @proc_attrs[:wmi_object].ole_respond_to?('Terminate')
-      rescue WIN32OLERuntimeError => ex
-        #raise HawatelPSException, :exception => ex, :message => "Cannot terminate process by WMI method Terminate()."
+      rescue WIN32OLERuntimeError
         return 1
       end
 

@@ -1,5 +1,7 @@
 module HawatelPS
   module Windows
+    ##
+    # = Process Information
     class ProcInfo < ProcControl
       # Process instance with attributes of that process
       # @param proc_attrs [Hash] attributes of the process

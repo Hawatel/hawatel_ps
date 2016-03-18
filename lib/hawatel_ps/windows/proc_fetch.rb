@@ -38,7 +38,6 @@ module HawatelPS
 
           proc_table = Array.new
 
-          # TODO maybe the better way will be put user info to class variable?
           @users_list = get_users
           @system_info = system_info
           @memory_total = @system_info[:totalvisiblememorysize]
@@ -146,7 +145,7 @@ module HawatelPS
         # @return [String] SID of user
         # @reutrn [nil] if wmi_object no longer exists
         def get_owner_sid(wmi_object)
-          # TODO performance problem (it takes ~10 seconds but the native wmi takes similar time)
+          # performance problem (it takes ~10 seconds but the native wmi takes similar time)
           owner = wmi_object.execMethod('GetOwnerSid')
           return owner.Sid if !owner.nil?
         rescue WmiCliException

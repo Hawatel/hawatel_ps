@@ -118,7 +118,7 @@ module HawatelPS
         # @param attrs [Hash] hash list contains process attributes
         def process_stat(attrs)
           stat_file = "/proc/#{attrs[:pid]}/stat"
-          if File.readable?  (stat_file)
+          if File.readable?(stat_file)
             File.foreach(stat_file).each do |line|
               attr = line.split(' ')
               attrs[:utime] = attr[13].to_i
@@ -164,7 +164,7 @@ module HawatelPS
         # @return [String]
         def process_cmdline(pid)
           cmdline_file = "/proc/#{pid}/cmdline"
-          if File.readable? (cmdline_file)
+          if File.readable?(cmdline_file)
             File.foreach(cmdline_file).each do |line|
               return line
             end
@@ -265,7 +265,7 @@ module HawatelPS
         # @return [String]
         def process_env(pid)
           environ_file = "/proc/#{pid}/environ"
-          if File.readable? (environ_file)
+          if File.readable?(environ_file)
             File.foreach(environ_file).each do |line|
               return line.split("\x0")
             end
@@ -346,7 +346,7 @@ module HawatelPS
               hex_ip   = line.split(' ')[1].split(':')[0].scan(/../)
               socketid = line.split(' ')[9]
               if hex_port =~ /$$$$/
-                hex_ip.map! { |e| e = e.to_i(16) }
+                hex_ip.map! { |e| e.to_i(16) }
                 socket_attrs = { :address => "#{hex_ip[3]}.#{hex_ip[2]}.#{hex_ip[1]}.#{hex_ip[0]}",
                                  :port => hex_port.to_i(16),
                                  :protocol => protocol,
