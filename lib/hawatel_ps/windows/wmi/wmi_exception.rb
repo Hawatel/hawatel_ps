@@ -1,5 +1,7 @@
 module HawatelPS
   module Windows
+    ##
+    # = Windows Management Instrumentation Exception
     class WmiCliException < Exception
       # Custom exception
       # @param args [Hash] the options to create a custom exception message

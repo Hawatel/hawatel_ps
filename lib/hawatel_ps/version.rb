@@ -1,3 +1,3 @@
-module HawatelPs
+module HawatelPS
   VERSION = "0.1.2"
 end

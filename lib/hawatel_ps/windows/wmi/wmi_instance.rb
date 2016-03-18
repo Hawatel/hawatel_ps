@@ -27,7 +27,7 @@ module HawatelPS
         #   wmi_object.execMethod('GetOwner')
         # @return [WIN32OLE]
         def execMethod(name)
-          result = @wmi_ole_object.execMethod_(name) if @wmi_ole_object.ole_respond_to?('execMethod_')
+          return @wmi_ole_object.execMethod_(name) if @wmi_ole_object.ole_respond_to?('execMethod_')
         rescue WIN32OLERuntimeError => ex
           raise WmiCliException, :exception => ex, :message => "Cannot invoke execMethod_('#{name}')"
         end

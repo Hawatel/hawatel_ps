@@ -1,5 +1,7 @@
 module HawatelPS
   module Windows
+    ##
+    # = Process Table
     class ProcTable
       class << self
 

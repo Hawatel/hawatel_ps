@@ -26,7 +26,7 @@ module HawatelPS
         connect_to_namespace
         results = @session.ExecQuery(wql_query)
 
-        wmi_ole_instances = create_wmi_ole_instances(results)
+        return create_wmi_ole_instances(results)
       rescue WIN32OLERuntimeError => ex
         raise WmiCliException, :exception => ex, :message => "Wrong result from WQL Query = '#{wql_query}'."
       end
